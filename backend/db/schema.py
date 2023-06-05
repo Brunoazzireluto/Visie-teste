@@ -13,8 +13,13 @@ class PeopleBase(BaseModel):
 class PeopleCreate(PeopleBase):
     pass
 
+    class Config:
+        orm_mode = True
+
 class People(PeopleBase):
     id_pessoa: int
+    funcao: str | None = None
+
 
     class Config:
         orm_mode = True

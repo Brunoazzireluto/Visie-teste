@@ -31,6 +31,14 @@ Com o ambiente devidamente ativado instalamos os requerimentos com o seguinte c�
 ```
 pip install -r requirements.txt
 ```
+Para rodas os testes unitários digite o comando:
+```
+pytest
+```
+Caso tenha algum erro relacionado as importações digite:
+```
+export PYTHONPATH=$PWD 
+```
 Após isso para colocarmos a aplição para rodar com o comando 
 ```
 uvicorn main:app  --reload

@@ -1,7 +1,7 @@
 from pydantic import BaseSettings
 
 class Settings(BaseSettings):
-    app_name: str = "Visie test"
+    app_nome: str = "Visie test"
     DATABASE_URL: str
 
     class Config:

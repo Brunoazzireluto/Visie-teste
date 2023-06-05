@@ -1,24 +1,29 @@
-from fastapi import Depends, FastAPI, HTTPException
-from sqlalchemy.orm import Session
-from db import crud, schema
+from fastapi import FastAPI
+from routes import people
 from models import model
 from db.database import SessionLocal, engine
 
 model.Base.metadata.create_all(bind=engine)
 
-app = FastAPI()
+description = """
+Um CRUD simples de operações numa base de dados de pessoas, feito para o teste da Empresa Visie Padrões Web
+
+## Pessoas
+
+Responsáveis por todas as operaçoes de CRUD
+
+* **Cadastrar uma pessoa**
+* **Consultar todas  as pessoas**
+* **Consultar uma pessoa pelo nome ou CPF**
+* **Editar uma pessoa**
+* **Excluir uma pessoa**
+
+"""
+
+app = FastAPI(title="Teste Visie", 
+description=description)
 
 
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+app.include_router(people.router)
 
-
-@app.get("/people/", response_model=list[schema.People])
-def read_people(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    people = crud.get_people(db, skip=skip, limit=limit)
-    return people
