@@ -31,6 +31,10 @@ Com o ambiente devidamente ativado instalamos os requerimentos com o seguinte c�
 ```
 pip install -r requirements.txt
 ```
+Agora criamos um arquivo .env com os dados de acesso do banco de dados neste modelo:
+```
+DATABASE_URL="bancodedados://usuario:senha@host/database"
+```
 Para rodas os testes unitários digite o comando:
 ```
 pytest
@@ -42,4 +46,27 @@ export PYTHONPATH=$PWD
 Após isso para colocarmos a aplição para rodar com o comando 
 ```
 uvicorn main:app  --reload
+```
+
+
+### Front end
+
+Uma Aplicação simples para acessar a APi e fazer o consumo dela, Criado com Next e Tailwind CSS
+
+### 🔧 Instalação
+
+Para fazer a instalação e rodar a aplicação devemos baixar os pacotes necessarios.
+
+**Linux**
+Ir até a pasta do projeto:
+```
+cd frontend\
+```
+instalação:
+```
+npm install
+```
+todando a aplicação em ambiente dev:
+```
+npm run dev
 ```

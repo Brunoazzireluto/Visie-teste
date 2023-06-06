@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from routes import people
 from models import model
 from db.database import SessionLocal, engine
@@ -24,6 +25,12 @@ app = FastAPI(title="Teste Visie",
 description=description)
 
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_methods=["GET", "PUT", "DELETE", "POST"],
+    allow_headers=["*"],
+)
 
 app.include_router(people.router)
 

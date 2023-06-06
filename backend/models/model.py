@@ -1,6 +1,8 @@
 from sqlalchemy import Column, String, Integer, Date
 from db.database import Base
 
+#Modelo de Banco de dados
+
 class People(Base):
     __tablename__ = "Pessoas"
     id_pessoa = Column(Integer, primary_key=True, index=True)
