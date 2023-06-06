@@ -70,3 +70,18 @@ todando a aplicação em ambiente dev:
 ```
 npm run dev
 ```
+
+<br>
+
+## Tecnologias usadas no projeto
+
+<br>
+
+<div style="display: inline_block">
+
+  [![Python](https://img.shields.io/badge/-python-%233776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+  [![FastAPi](https://img.shields.io/badge/-fastAPI-%23009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+  [![Next.Js](https://img.shields.io/badge/-next.js-%23000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
+  [![Tailwind CSS](https://img.shields.io/badge/-tailwind%20css-%2306B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+
+</div>
